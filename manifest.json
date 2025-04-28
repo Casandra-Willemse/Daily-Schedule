@@ -1,20 +1,14 @@
-
 {
-  "name": "Fancy Daily Checklist",
+  "name": "Daily Checklist",
   "short_name": "Checklist",
   "start_url": "./index.html",
   "display": "standalone",
-  "background_color": "#fff0f5",
-  "theme_color": "#ff69b4",
+  "background_color": "#d0f0c0",
+  "theme_color": "#4CAF50",
   "icons": [
     {
-      "src": "icon-192.png",
+      "src": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA...your_icon_base64_here...",
       "sizes": "192x192",
-      "type": "image/png"
-    },
-    {
-      "src": "icon-512.png",
-      "sizes": "512x512",
       "type": "image/png"
     }
   ]
