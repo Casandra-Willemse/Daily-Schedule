@@ -1,29 +1,23 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Fancy Daily Checklist</title>
+<title>Daily Checklist</title>
 <link rel="manifest" href="manifest.json">
-<script>
-  if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.register('service-worker.js');
-  }
-</script>
 <style>
   body {
     font-family: 'Poppins', sans-serif;
-    padding: 20px;
-    background-color: #fff0f5;
     margin: 0;
+    padding: 20px;
+    background: linear-gradient(135deg, #d0f0c0, #a0e7e5);
     color: #333;
   }
   h1 {
     text-align: center;
     margin-bottom: 20px;
-    font-size: 26px;
-    color: #ff69b4;
+    font-size: 28px;
+    color: #4CAF50;
   }
   .task {
     background: white;
@@ -32,18 +26,18 @@
     border-radius: 12px;
     display: flex;
     align-items: center;
-    box-shadow: 0 4px 8px rgba(255, 182, 193, 0.5);
+    box-shadow: 0 4px 8px rgba(0, 128, 128, 0.2);
     transition: background 0.3s, transform 0.2s;
   }
   .task.checked {
-    background: #ffe6f0;
+    background: #d0f0c0;
     transform: scale(1.02);
   }
   input[type=checkbox] {
     width: 22px;
     height: 22px;
     margin-right: 15px;
-    accent-color: #ff69b4;
+    accent-color: #4CAF50;
   }
   label {
     flex: 1;
@@ -51,17 +45,17 @@
   }
   #confetti {
     display: none;
-    font-size: 30px;
+    font-size: 26px;
     text-align: center;
-    color: #ff69b4;
     margin-top: 20px;
+    color: #4CAF50;
   }
 </style>
+<link rel="icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA...your_icon_base64_here..." type="image/png">
 </head>
 <body>
 
-<h1>My Pretty Checklist</h1>
-
+<h1>Daily Checklist</h1>
 <div id="tasks">
   <div class="task"><input type="checkbox" onchange="toggle(this)"><label>Wake up + Make bed + Morning routine (10:00 AM)</label></div>
   <div class="task"><input type="checkbox" onchange="toggle(this)"><label>Light Cleaning (10:30 AM)</label></div>
@@ -90,7 +84,6 @@
 function toggle(box) {
   const task = box.parentElement;
   task.classList.toggle('checked');
-
   const all = document.querySelectorAll('input[type=checkbox]');
   const allChecked = Array.from(all).every(chk => chk.checked);
   if (allChecked) {
@@ -102,4 +95,4 @@ function toggle(box) {
 </script>
 
 </body>
-</html>
+  </html>
